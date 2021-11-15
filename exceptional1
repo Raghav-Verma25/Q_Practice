@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class exceptional1 {
+    
+        public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter number of array index");
+            int n=sc.nextInt();
+            int arr[]=new int[n];
+            System.out.println("Enter array element");
+            for(int i=0;i<n;i++){
+                arr[i]=sc.nextInt();
+            }
+            System.out.println("Enter array index you want to check");
+            int ind=sc.nextInt();
+
+            try{
+
+                System.out.println("The value index of array: "+arr[ind]);
+
+            }
+
+            catch (ArrayIndexOutOfBoundsException e){
+                System.out.println("Exception occured");
+                System.out.println(e);
+            }
+
+        
+    }
+}
