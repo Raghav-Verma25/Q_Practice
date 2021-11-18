@@ -1,0 +1,39 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Exception_1 {
+    public static void main(String[] args) {
+        int arr[]= new int[5];
+        arr[0]=9;
+        arr[1]=3;
+        arr[2]=6;
+        arr[3]=45;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter an index of array ");
+        int array_num  = sc.nextInt();
+        System.out.println("enter a number for division ");
+        int num = sc.nextInt();
+
+        try {
+            System.out.println(arr[array_num]);
+            System.out.println(arr[array_num] / num);
+        }
+        catch(ArithmeticException e){
+            System.out.println(e);
+            System.out.println("exception occur ");
+        }
+        catch (IndexOutOfBoundsException e){
+            System.out.println(e);
+            System.out.println("exception occur ");
+        }
+        catch(InputMismatchException e){
+            System.out.println(e);
+            System.out.println("exception occur ");
+        }
+        finally {
+            System.out.println("final block will always execute");
+        }
+
+
+    }
+}
