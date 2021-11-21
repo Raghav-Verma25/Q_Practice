@@ -1,0 +1,88 @@
+import javax.xml.transform.Result;
+import java.util.Scanner;
+
+/*Lecture-4
+Problem-1 (Inheritance):
+Write a Java program to illustrate the single inheritance concept.
+Create a class Marks contains the data members
+id of int data type,javaMarks, cMarks and cppMarks of float data type
+write a method setMarks() to initialize the data members
+write a method displayMarks() which will display the given data
+Create another class Result which is derived from the class Marks contains the
+data members total and avg of float data type
+write a method compute() to find total and average of the given marks
+write a method showResult() which will display the total and avg marks
+Write a class SingleInheritanceDemo with main() method it receives four
+arguments as id, javaMarks, cMarks and cppMarks.
+Create object only to the class Result to access the methods.
+If the input given by the user is "101", "45.50", "67.75", "72.25" then the program should
+print the output as:
+Id: 101
+Java marks: 45.5
+C marks: 67.75
+Cpp marks: 72.25
+Total : 185.5
+Avg : 61.833332*/
+
+
+ class Marks {
+    int id;
+    float javaMarks, cMarks, cppMarks;
+
+    void setMarks(int id, float javaMarks, float cMarks, float cppMarks) {
+        this.id = id;
+        this.javaMarks = javaMarks;
+        this.cMarks = cMarks;
+        this.cppMarks = cppMarks;
+    }
+
+    void displayMarks() {
+        System.out.println("id is = " + id);
+        System.out.println("javamarks is = " + javaMarks);
+        System.out.println("cMarks is = " + cMarks);
+        System.out.println("cpparks is = " + cppMarks);
+    }
+}
+class Result5 extends Marks{
+        float total  , avg;
+
+         void compute(){
+            total = javaMarks + cMarks + cppMarks;
+            avg = total /3;
+        }
+         void showResult(){
+            System.out.println("total marks is = "+ total);
+            System.out.println("average is ="+avg);
+        }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a id of Student = ");
+        int id = sc.nextInt();
+
+        System.out.println("enter a java marks of student = ");
+        float javaMarks = sc .nextFloat();
+
+        System.out.println("enter cmarks = ");
+        float cMarks = sc.nextFloat();
+
+        System.out.println("enter cppmarks = ");
+        float cppMArks = sc.nextFloat();
+
+        Result5 obj = new Result5();
+        obj.setMarks(id, javaMarks, cMarks, cppMArks);
+        obj.displayMarks();
+        obj.compute();
+        obj.showResult();
+    }
+}
+
+
+
+
+
+
+
+
+
+
