@@ -1,0 +1,43 @@
+//package com.company;
+// creating a thread using Runnable interface
+
+class MyrunnableThreading implements Runnable{
+    @Override
+    public void run() {
+        System.out.println("this is myrunnable threading");
+        System.out.println("this is myrunnable threading");
+        System.out.println("this is myrunnable threading");
+        System.out.println("this is myrunnable threading");
+        System.out.println("this is myrunnable threading");
+        System.out.println("this is myrunnable threading");
+        System.out.println("this is myrunnable threading");
+        System.out.println("this is myrunnable threading");
+    }
+}
+
+class MyrunnableThreading2 implements Runnable{
+    @Override
+    public void run() {
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+        System.out.println("this is myrunnable threading 2 ");
+    }
+}
+
+
+class I{
+    public static void main(String[] args) {
+        MyrunnableThreading a1  = new MyrunnableThreading();
+        Thread t1 = new Thread(a1);
+        MyrunnableThreading2 a2  = new MyrunnableThreading2();
+        Thread t2 = new Thread(a2);
+        t1.start();
+        t2.start();
+    }
+}
