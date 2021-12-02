@@ -1,0 +1,25 @@
+class Myrunnablethread extends Thread{
+    public void run(){
+        int i=1;
+        while(i<100){
+        System.out.println("this is thread 1 ");
+    }}
+}
+class Myrunnablethread2 extends Thread{
+    public void run(){
+        int i=1;
+        while(i<100){
+            System.out.println("this is thread 2 ");
+        }}
+}
+
+public class threading_extends {
+    public static void main(String[] args) {
+        Myrunnablethread t1 = new Myrunnablethread();
+        Myrunnablethread2 t2 = new Myrunnablethread2();
+
+        t1.start();
+        t2.run();
+    }
+
+}
